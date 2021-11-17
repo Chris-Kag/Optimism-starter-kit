@@ -207,7 +207,7 @@ module.exports = {
     optimism: {
       url: "https://mainnet.optimism.io",
       accounts: {
-        mnemonic: mnemonic(),
+        mnemonic: '<Insert your account mnemonic>',
       },
       companionNetworks: {
         l1: "mainnet",
@@ -216,7 +216,7 @@ module.exports = {
     kovanOptimism: {
       url: "https://kovan.optimism.io",
       accounts: {
-        mnemonic: mnemonic(),
+        mnemonic: '<Insert your account mnemonic>',
       },
       companionNetworks: {
         l1: "kovan",
