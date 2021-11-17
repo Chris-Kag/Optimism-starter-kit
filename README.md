@@ -28,15 +28,17 @@ yarn start
 
 > 👉 Visit your frontend at http://localhost:3000
 
-> in a second terminal window:
 
-__This requires [Docker](https://www.docker.com) & [Docker Compose](https://docs.docker.com/compose/install/)__
+
+__The following requires [Docker](https://www.docker.com) & [Docker Compose](https://docs.docker.com/compose/install/)__
 
 ### Creating a node
 
-### Download the docker images.
+#### Download the docker images.
 
 Clone the [Optimism monorepo](https://github.com/ethereum-optimism/optimism).
+
+> in a second terminal window:
 
 ```sh
 git clone https://github.com/ethereum-optimism/optimism.git
@@ -55,14 +57,14 @@ You might get a timeout at first. If that is the case, just run the docker-compo
 
 Make changes to `hardhat.config.js` in `packages/hardhat/test` to deploy on the network you want.
 
-Here, it was set to `"localOptimim"`
+Here, it was set to `"localOptimism"`by default.
 
 <img width="452" alt="Screen Shot 2021-11-17 at 05 09 05" src="https://user-images.githubusercontent.com/94156214/142128280-d398c56b-97a7-43bd-806d-6ad856380bbf.png">
 
 All of the default hardhat accounts are funded with ETH on both L1 and L2. Therefore, you have to add the mnemonic:
 
 ```sh
-test test test test test test test test test test test junk
+'test test test test test test test test test test test junk'
 
 ```
 
@@ -81,11 +83,26 @@ yarn deploy
 
 📱 Open http://localhost:3000 to see the app
 
-### Automated with Gitpod
+### Deploy to a real network
 
-To deploy this project to Gitpod, click this button:
+Once you're app is ready, you can deploy it to a testnet such as Optimistic Kovan. edit `hardhat.config.js` and add your account mnemonic to `kovanOptimism`.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/scaffold-eth/scaffold-eth)
+<img width="485" alt="Screen Shot 2021-11-17 at 12 38 31" src="https://user-images.githubusercontent.com/94156214/142186139-2243672c-080a-4aba-81d8-b145958127c0.png">
+
+Same procedure for deploying on Optimism mainnet.
+
+<img width="510" alt="Screen Shot 2021-11-17 at 12 49 10" src="https://user-images.githubusercontent.com/94156214/142186880-30785947-57a5-4932-bedd-925a6046cab9.png">
+
+
+## Need some ETH accross multiple testnets?
+
+<img width="237" alt="Screen Shot 2021-11-17 at 12 54 17" src="https://user-images.githubusercontent.com/94156214/142187632-d557351d-0cda-4c58-bab2-d93a89160f53.png">
+
+
+### Use [Paradigm](https://faucet.paradigm.xyz) faucet to get you set up.
+
+<img width="617" alt="Screen Shot 2021-11-17 at 12 53 31" src="https://user-images.githubusercontent.com/94156214/142187537-779db3a6-c167-4796-8c23-26aac97df127.png">
+
 
 # 📚 Documentation
 
