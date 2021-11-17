@@ -1,11 +1,11 @@
-# 🏗 Scaffold-ETH
+# 🏗 Scaffold-ETH - Optimism Starter Kit
 
-> everything you need to build on Ethereum! 🚀
+> 🧫 Prototype frontend experiences to build on Optimistic Ethereum
+> (https://www.optimism.io)
 
-🧪 Quickly experiment with Solidity using a frontend that adapts to your smart contract:
+Learn more [here](https://gateway.optimism.io/welcome)
 
-![image](https://user-images.githubusercontent.com/2653167/124158108-c14ca380-da56-11eb-967e-69cde37ca8eb.png)
-
+Grafana public [dashboard](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)
 
 # 🏄‍♂️ Quick Start
 
@@ -13,31 +13,63 @@
 
 Prerequisites: [Node](https://nodejs.org/en/download/) plus [Yarn](https://classic.yarnpkg.com/en/docs/install/) and [Git](https://git-scm.com/downloads)
 
-> clone/fork 🏗 scaffold-eth:
 
-```bash
-git clone https://github.com/austintgriffith/scaffold-eth.git
-```
+### Installation 
 
-> install and start your 👷‍ Hardhat chain:
+```sh
+git clone -b optimism-starter-kit https://github.com/austintgriffith/scaffold-eth.git optimism-starter-kit
 
-```bash
-cd scaffold-eth
+cd optimism-starter-kit
+
 yarn install
-yarn chain
+
+yarn start
 ```
 
-> in a second terminal window, start your 📱 frontend:
+> 👉 Visit your frontend at http://localhost:3000
 
-```bash
-cd scaffold-eth
-yarn start
+> in a second terminal window:
+
+__This requires [Docker](https://www.docker.com) & [Docker Compose](https://docs.docker.com/compose/install/)__
+
+### Creating a node
+
+### Download the docker images.
+
+Clone the [Optimism monorepo](https://github.com/ethereum-optimism/optimism).
+
+```sh
+git clone https://github.com/ethereum-optimism/optimism.git
+```
+
+### Starting the node
+
+This process downloads the images from the Docker hub, and depending on the hardware it can take up to ten minutes.
+
+```sh
+cd optimism/ops
+docker-compose -f docker-compose-nobuild.yml up -t 3600
+
+```
+You might get a timeout at first. If that is the case, just run the docker-compose command again.
+
+Make changes to `hardhat.config.js` in `packages/hardhat/test` to deploy on the network you want.
+
+Here, it was set to `"localOptimim"`
+
+<img width="452" alt="Screen Shot 2021-11-17 at 05 09 05" src="https://user-images.githubusercontent.com/94156214/142128280-d398c56b-97a7-43bd-806d-6ad856380bbf.png">
+
+All of the default hardhat accounts are funded with ETH on both L1 and L2. Therefore, you have to add the mnemonic:
+
+```sh
+test test test test test test test test test test test junk
+
 ```
 
 > in a third terminal window, 🛰 deploy your contract:
 
 ```bash
-cd scaffold-eth
+cd optimism-starter-kit
 yarn deploy
 ```
 
