@@ -85,7 +85,8 @@ yarn deploy
 
 ### Deploy to a real network
 
-Once you're app is ready, you can deploy it to a testnet such as Optimistic Kovan. edit `hardhat.config.js` and add your account mnemonic to `kovanOptimism`.
+Once you're app is ready, you can deploy it to a testnet such as Optimistic Kovan. 
+Edit `hardhat.config.js` to add your account mnemonic to `kovanOptimism`.
 
 <img width="485" alt="Screen Shot 2021-11-17 at 12 38 31" src="https://user-images.githubusercontent.com/94156214/142186139-2243672c-080a-4aba-81d8-b145958127c0.png">
 
